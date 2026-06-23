@@ -1,6 +1,8 @@
-# Bugops — Agency Website (Frontend)
+# BugOps — Agency Website
 
-Premium portfolio website for **Bugops**, a custom web development and AI engineering agency.
+Official BugOps agency website — web development & AI engineering. Built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion.
+
+Premium portfolio website for **BugOps**, a custom web development and AI engineering agency.
 
 ## Stack
 
