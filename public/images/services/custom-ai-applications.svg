@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Interlocking module blocks -->
+  <rect x="88" y="56" width="72" height="56" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <rect x="144" y="96" width="72" height="56" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <rect x="200" y="56" width="72" height="56" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <rect x="256" y="96" width="72" height="56" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <!-- Interlock notches -->
+  <path d="M124 96v16h32V96" stroke="#8F6A3E" stroke-width="1.2" opacity="0.5"/>
+  <path d="M236 96v16h32V96" stroke="#8F6A3E" stroke-width="1.2" opacity="0.5"/>
+  <path d="M180 112v16h32v-16" stroke="#8F6A3E" stroke-width="1.2" opacity="0.5"/>
+  <!-- Module internals -->
+  <circle cx="124" cy="84" r="10" stroke="#FAF6F0" stroke-width="1" opacity="0.25"/>
+  <path d="M168 120h24M168 132h16" stroke="#FAF6F0" stroke-width="1" opacity="0.22"/>
+  <rect x="224" y="72" width="24" height="24" rx="4" stroke="#FAF6F0" stroke-width="1" opacity="0.25"/>
+  <path d="M280 120h24M280 132h16" stroke="#FAF6F0" stroke-width="1" opacity="0.22"/>
+  <!-- Base assembly platform -->
+  <rect x="72" y="168" width="256" height="24" rx="6" stroke="#C4A574" stroke-width="1.2" opacity="0.45"/>
+  <path d="M96 180h208" stroke="#FAF6F0" stroke-width="1" opacity="0.15"/>
+</svg>

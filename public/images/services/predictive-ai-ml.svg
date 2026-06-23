@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Axes -->
+  <path d="M56 176h288M56 176V64" stroke="#8F6A3E" stroke-width="1" opacity="0.4"/>
+  <!-- Historical solid data line -->
+  <path d="M72 152l40-32 36 20 44-48 52 28 48-16" stroke="#C4A574" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <circle cx="72" cy="152" r="3" fill="#FAF6F0" opacity="0.6"/>
+  <circle cx="112" cy="120" r="3" fill="#FAF6F0" opacity="0.6"/>
+  <circle cx="148" cy="140" r="3" fill="#FAF6F0" opacity="0.6"/>
+  <circle cx="192" cy="92" r="3" fill="#FAF6F0" opacity="0.6"/>
+  <circle cx="244" cy="120" r="3" fill="#FAF6F0" opacity="0.6"/>
+  <circle cx="292" cy="104" r="3" fill="#C4A574" opacity="0.7"/>
+  <!-- Forecast dotted projection -->
+  <path d="M292 104l36-28 48 12" stroke="#C4A574" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" stroke-dasharray="6 5"/>
+  <circle cx="328" cy="76" r="3" fill="#FAF6F0" opacity="0.5"/>
+  <circle cx="376" cy="88" r="3" fill="#FAF6F0" opacity="0.5"/>
+  <!-- Forecast divider -->
+  <path d="M292 64v112" stroke="#8F6A3E" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>
+  <path d="M284 72h16" stroke="#FAF6F0" stroke-width="1" opacity="0.25"/>
+  <path d="M284 80h24" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+</svg>

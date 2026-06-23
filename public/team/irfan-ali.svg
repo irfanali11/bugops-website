@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="Portrait of Irfan Ali">
+  <defs>
+    <linearGradient id="bg" x1="20" y1="8" x2="108" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1E8"/>
+      <stop offset="1" stop-color="#E8DCC8"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="40" y1="88" x2="88" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A2622"/>
+      <stop offset="1" stop-color="#4A4034"/>
+    </linearGradient>
+    <radialGradient id="faceLight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(58 52) rotate(90) scale(34)">
+      <stop stop-color="#F2D6C2"/>
+      <stop offset="1" stop-color="#D4A574"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" fill="url(#bg)"/>
+  <ellipse cx="64" cy="118" rx="42" ry="18" fill="#2A2622" opacity="0.08"/>
+  <path d="M24 128c8-18 24-28 40-28s32 10 40 28H24Z" fill="url(#shirt)"/>
+  <path d="M44 98c6 8 34 8 40 0l-4 30H48l-4-30Z" fill="#3D3832"/>
+  <path d="M48 88h32l4 12H44l4-12Z" fill="#FAF6F0"/>
+  <ellipse cx="64" cy="54" rx="28" ry="30" fill="url(#faceLight)"/>
+  <path d="M36 48c4-14 18-22 28-22s24 8 28 22c-8-6-18-9-28-9s-20 3-28 9Z" fill="#1F1C18"/>
+  <path d="M38 44c6-2 12-3 18-3h16c6 0 12 1 18 3-5-8-14-13-26-13S43 36 38 44Z" fill="#2A2622"/>
+  <ellipse cx="52" cy="56" rx="4" ry="3.5" fill="#2A2622"/>
+  <ellipse cx="76" cy="56" rx="4" ry="3.5" fill="#2A2622"/>
+  <ellipse cx="53" cy="55" rx="1.2" ry="1.2" fill="#FAF6F0"/>
+  <ellipse cx="77" cy="55" rx="1.2" ry="1.2" fill="#FAF6F0"/>
+  <path d="M58 66c4 3 8 3 12 0" stroke="#B8875E" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M42 78c6 8 38 8 44 0" stroke="#C4A574" stroke-width="1.2" opacity="0.45"/>
+  <path d="M36 62c-2 8-1 16 2 22" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <path d="M92 62c2 8 1 16-2 22" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+</svg>

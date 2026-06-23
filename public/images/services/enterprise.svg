@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Panel 1 - primary dashboard -->
+  <rect x="40" y="56" width="112" height="80" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <path d="M52 72h56M52 84h40M52 96h48" stroke="#FAF6F0" stroke-width="1" opacity="0.22"/>
+  <rect x="52" y="108" width="88" height="20" rx="3" stroke="#8F6A3E" stroke-width="1" opacity="0.45"/>
+  <!-- Panel 2 - top right -->
+  <rect x="248" y="40" width="112" height="72" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.7"/>
+  <path d="M260 56h64M260 68h48M260 80h56" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+  <path d="M260 92l16-8 12 6 20-14" stroke="#C4A574" stroke-width="1.2" opacity="0.55"/>
+  <!-- Panel 3 - bottom center -->
+  <rect x="144" y="136" width="112" height="72" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <rect x="156" y="152" width="24" height="24" rx="4" stroke="#C4A574" stroke-width="1" opacity="0.5"/>
+  <rect x="188" y="152" width="24" height="24" rx="4" stroke="#C4A574" stroke-width="1" opacity="0.5"/>
+  <rect x="220" y="152" width="24" height="24" rx="4" stroke="#C4A574" stroke-width="1" opacity="0.5"/>
+  <path d="M156 188h80" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+  <!-- Connector lines -->
+  <path d="M152 96h88" stroke="#8F6A3E" stroke-width="1.2" opacity="0.5"/>
+  <path d="M240 96v32" stroke="#8F6A3E" stroke-width="1.2" opacity="0.5"/>
+  <path d="M152 136h-12v-52" stroke="#8F6A3E" stroke-width="1.2" opacity="0.45"/>
+  <circle cx="240" cy="96" r="4" fill="#C4A574" opacity="0.55"/>
+  <circle cx="152" cy="96" r="4" fill="#C4A574" opacity="0.55"/>
+  <circle cx="200" cy="136" r="4" fill="#C4A574" opacity="0.55"/>
+  <!-- Small node panel -->
+  <rect x="296" y="148" width="64" height="48" rx="6" stroke="#C4A574" stroke-width="1.2" opacity="0.55"/>
+  <path d="M308 164h40M308 176h28" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+  <path d="M256 172h40" stroke="#C4A574" stroke-width="1" opacity="0.45"/>
+</svg>

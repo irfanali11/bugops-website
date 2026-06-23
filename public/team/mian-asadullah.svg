@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="Portrait of Mian Asadullah">
+  <defs>
+    <linearGradient id="bg" x1="18" y1="10" x2="110" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9F2"/>
+      <stop offset="1" stop-color="#EBE0CF"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="36" y1="90" x2="92" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D3832"/>
+      <stop offset="1" stop-color="#5C4F3F"/>
+    </linearGradient>
+    <radialGradient id="faceLight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(62 54) rotate(90) scale(35)">
+      <stop stop-color="#EFD2BC"/>
+      <stop offset="1" stop-color="#CFA67A"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" fill="url(#bg)"/>
+  <ellipse cx="64" cy="118" rx="42" ry="18" fill="#2A2622" opacity="0.08"/>
+  <path d="M22 128c9-17 26-27 42-27s33 10 42 27H22Z" fill="url(#shirt)"/>
+  <path d="M46 98c5 7 31 7 36 0l-3 30H49l-3-30Z" fill="#4A4034"/>
+  <path d="M47 88h34l3 11H44l3-11Z" fill="#FFFCF8"/>
+  <ellipse cx="64" cy="55" rx="29" ry="31" fill="url(#faceLight)"/>
+  <path d="M34 50c5-15 19-24 30-24s25 9 30 24c-9-7-19-10-30-10s-21 3-30 10Z" fill="#1A1816"/>
+  <path d="M36 46c7-3 14-4 22-4h12c8 0 15 1 22 4-6-9-16-14-28-14S42 37 36 46Z" fill="#2A2622"/>
+  <rect x="43" y="58" width="42" height="12" rx="6" fill="#2A2622" opacity="0.88"/>
+  <path d="M45 64h38" stroke="#8F6A3E" stroke-width="1.2" opacity="0.35"/>
+  <ellipse cx="52" cy="57" rx="3.8" ry="3.4" fill="#2A2622"/>
+  <ellipse cx="76" cy="57" rx="3.8" ry="3.4" fill="#2A2622"/>
+  <ellipse cx="53" cy="56" rx="1.1" ry="1.1" fill="#FAF6F0"/>
+  <ellipse cx="77" cy="56" rx="1.1" ry="1.1" fill="#FAF6F0"/>
+  <path d="M57 69c4.5 3.5 9.5 3.5 14 0" stroke="#B8875E" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M48 76c2 5 30 5 32 0" fill="#2A2622" opacity="0.12"/>
+  <path d="M40 64c-2 9-1 17 3 23" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.32"/>
+  <path d="M88 64c2 9 1 17-3 23" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.32"/>
+</svg>

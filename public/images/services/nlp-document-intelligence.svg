@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Source document -->
+  <rect x="56" y="56" width="120" height="144" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <path d="M72 80h88M72 96h72M72 112h80M72 128h64M72 144h56M72 160h48" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+  <!-- Highlighted / extracted segments -->
+  <rect x="72" y="92" width="72" height="8" rx="2" fill="#C4A574" opacity="0.45"/>
+  <rect x="72" y="124" width="56" height="8" rx="2" fill="#C4A574" opacity="0.35"/>
+  <rect x="72" y="152" width="64" height="8" rx="2" fill="#C4A574" opacity="0.4"/>
+  <!-- Extraction arrows -->
+  <path d="M176 100h48M176 128h48M176 156h48" stroke="#8F6A3E" stroke-width="1.2" opacity="0.5"/>
+  <path d="M216 100l6-4 6 4M216 128l6-4 6 4M216 156l6-4 6 4" stroke="#8F6A3E" stroke-width="1" opacity="0.45" fill="none"/>
+  <!-- Structured output -->
+  <rect x="232" y="72" width="112" height="40" rx="6" stroke="#C4A574" stroke-width="1.2" opacity="0.65"/>
+  <rect x="232" y="120" width="112" height="40" rx="6" stroke="#C4A574" stroke-width="1.2" opacity="0.65"/>
+  <rect x="232" y="168" width="112" height="32" rx="6" stroke="#C4A574" stroke-width="1.2" opacity="0.55"/>
+  <path d="M244 88h48M244 136h56M244 184h40" stroke="#FAF6F0" stroke-width="1" opacity="0.25"/>
+  <rect x="244" y="84" width="32" height="4" rx="1" fill="#C4A574" opacity="0.5"/>
+  <rect x="244" y="132" width="40" height="4" rx="1" fill="#C4A574" opacity="0.45"/>
+</svg>

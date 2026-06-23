@@ -1,0 +1,371 @@
+/* ——— Premium motion layer (GPU-optimized) ——— */
+
+:root {
+  --ease-premium: ease-out;
+  --duration-premium: 0.38s;
+}
+
+/* Shared GPU hint for animated surfaces */
+.motion-gpu {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Pause scroll-reveal work during programmatic section jumps */
+html.motion-scroll-paused .motion-enter,
+html.motion-scroll-paused .motion-enter-mask,
+html.motion-scroll-paused .page-hero-enter,
+html.motion-scroll-paused .page-hero-enter-mask {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html.motion-scroll-paused .hero-ambient-core,
+html.motion-scroll-paused .hero-mesh-grid,
+html.motion-scroll-paused .hero-mesh-glow-left.hero-ambient-enhanced,
+html.motion-scroll-paused .hero-mesh-glow-right.hero-ambient-enhanced {
+  animation-play-state: paused;
+}
+
+/* Buttons: shimmer track (transform only) */
+.btn-primary,
+.btn-secondary,
+.btn-ghost {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  will-change: transform, opacity;
+  transition: transform var(--duration-premium) var(--ease-premium);
+}
+
+.btn-primary:not([aria-busy="true"])::before,
+.btn-secondary:not([aria-busy="true"])::before,
+.btn-ghost::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 62%
+  );
+  transform: translateX(-130%) skewX(-12deg);
+  transition: transform 0.45s var(--ease-premium);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+.btn-primary:not([aria-busy="true"]):hover::before,
+.btn-secondary:not([aria-busy="true"]):hover::before,
+.btn-ghost:hover::before {
+  transform: translateX(130%) skewX(-12deg);
+}
+
+.btn-primary:focus-visible {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.18) inset,
+    0 4px 18px rgba(6, 182, 212, 0.25),
+    0 0 24px rgba(139, 92, 246, 0.15),
+    0 0 0 3px rgba(6, 182, 212, 0.35),
+    0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+.btn-secondary:focus-visible,
+.btn-ghost:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(6, 182, 212, 0.2),
+    0 0 24px rgba(139, 92, 246, 0.12);
+}
+
+/* Interactive links — transform + opacity only */
+.text-link {
+  will-change: transform, opacity;
+  transition:
+    color var(--duration-premium) var(--ease-premium),
+    opacity var(--duration-premium) var(--ease-premium),
+    transform var(--duration-premium) var(--ease-premium);
+}
+
+.text-link:hover {
+  transform: translateX(2px);
+}
+
+/* Hero: opacity + transform entrance (mask uses same GPU path) */
+.motion-enter-mask {
+  animation: motion-enter 0.38s var(--ease-premium) both;
+}
+
+.motion-enter-mask.motion-enter-delay-1 {
+  animation-delay: 0.05s;
+}
+
+.motion-enter-mask.motion-enter-delay-2 {
+  animation-delay: 0.1s;
+}
+
+.motion-enter-mask.motion-enter-delay-3 {
+  animation-delay: 0.15s;
+}
+
+.motion-enter-mask.motion-enter-delay-4 {
+  animation-delay: 0.2s;
+}
+
+/* Hero ambient intelligence — transform + opacity only */
+@keyframes hero-ambient-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+@keyframes hero-orb-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(12px, -8px) scale(1.03);
+  }
+  66% {
+    transform: translate(-8px, 10px) scale(0.98);
+  }
+}
+
+@keyframes hero-grid-drift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(48px, 48px);
+  }
+}
+
+.hero-ambient-core {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  width: min(520px, 70vw);
+  height: min(520px, 70vw);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.14) 0%,
+    rgba(139, 92, 246, 0.1) 38%,
+    transparent 68%
+  );
+  filter: blur(48px);
+  animation: hero-ambient-pulse 16s ease-in-out infinite;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.hero-mesh-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 30% 20%, black 20%, transparent 75%);
+  opacity: 0.5;
+  animation: hero-grid-drift 40s linear infinite;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-mesh-glow-left.hero-ambient-enhanced {
+  animation: hero-orb-drift 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-mesh-glow-right.hero-ambient-enhanced {
+  animation:
+    hero-glow-float 10s ease-in-out infinite,
+    hero-orb-drift 18s ease-in-out infinite reverse;
+  will-change: transform;
+}
+
+/* Page hero entrance */
+.page-hero-enter {
+  animation: motion-enter 0.38s var(--ease-premium) both;
+}
+
+.page-hero-enter-mask {
+  animation: motion-enter 0.4s var(--ease-premium) both;
+}
+
+.page-hero-enter-delay-1 {
+  animation-delay: 0.06s;
+}
+
+.page-hero-enter-mask.page-hero-enter-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.page-hero-enter-delay-2 {
+  animation-delay: 0.12s;
+}
+
+.page-hero-enter-mask.page-hero-enter-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.page-hero-enter-delay-3 {
+  animation-delay: 0.18s;
+}
+
+.page-hero-enter-mask.page-hero-enter-delay-3 {
+  animation-delay: 0.24s;
+}
+
+/* Cards: inner illumination + transform depth */
+.stat-card {
+  position: relative;
+}
+
+.surface-card::after,
+.ai-service-card::after,
+.stat-card::after,
+.tech-stack-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse 90% 60% at 50% 0%,
+    rgba(6, 182, 212, 0.1) 0%,
+    rgba(139, 92, 246, 0.06) 35%,
+    transparent 70%
+  );
+  transition: opacity var(--duration-premium) var(--ease-premium);
+  z-index: 0;
+  will-change: opacity;
+}
+
+.surface-card:hover::after,
+.ai-service-card:hover::after,
+.stat-card:hover::after,
+.tech-stack-card:hover::after {
+  opacity: 1;
+}
+
+.surface-card,
+.industry-card,
+.ai-service-card,
+.stat-card,
+.tech-stack-card {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  transition: transform var(--duration-premium) var(--ease-premium);
+}
+
+.surface-card:hover {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.industry-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.ai-service-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.tech-stack-card:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Form fields: transform-only lift on focus */
+.form-input,
+.form-select-trigger {
+  will-change: transform, opacity;
+  transition: transform var(--duration-premium) var(--ease-premium);
+}
+
+.form-input:focus {
+  transform: translateY(-1px);
+  background-color: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(6, 182, 212, 0.16),
+    0 0 18px rgba(6, 182, 212, 0.1),
+    0 0 36px rgba(139, 92, 246, 0.08),
+    inset 0 1px 0 rgba(6, 182, 212, 0.05);
+}
+
+.form-select-trigger:focus-visible,
+.form-select.is-open .form-select-trigger {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 3px rgba(6, 182, 212, 0.16),
+    0 0 18px rgba(6, 182, 212, 0.1),
+    0 0 36px rgba(139, 92, 246, 0.08);
+}
+
+/* Nav & icons */
+.interactive-icon:focus-visible {
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.25), 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+.interactive-nav-item {
+  will-change: transform, opacity;
+  transition: transform var(--duration-premium) var(--ease-premium);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-enter-mask,
+  .page-hero-enter-mask {
+    animation: motion-enter 0.32s ease-out both;
+  }
+
+  .page-hero-enter {
+    animation: none;
+  }
+
+  .hero-ambient-core,
+  .hero-mesh-grid,
+  .hero-mesh-glow-left.hero-ambient-enhanced,
+  .hero-mesh-glow-right.hero-ambient-enhanced {
+    animation: none;
+  }
+
+  .btn-primary:not([aria-busy="true"])::before,
+  .btn-secondary:not([aria-busy="true"])::before,
+  .btn-ghost::before {
+    display: none;
+  }
+
+  .surface-card:hover,
+  .industry-card:hover,
+  .ai-service-card:hover,
+  .stat-card:hover,
+  .tech-stack-card:hover {
+    transform: none;
+  }
+
+  .form-input:focus,
+  .form-select-trigger:focus-visible,
+  .form-select.is-open .form-select-trigger {
+    transform: none;
+  }
+
+  .text-link:hover {
+    transform: none;
+  }
+}

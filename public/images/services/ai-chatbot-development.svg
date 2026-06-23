@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Document / knowledge base -->
+  <rect x="56" y="72" width="88" height="112" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <path d="M72 96h56M72 112h48M72 128h52M72 144h40" stroke="#FAF6F0" stroke-width="1" opacity="0.22"/>
+  <rect x="72" y="156" width="32" height="12" rx="2" fill="#C4A574" opacity="0.35"/>
+  <!-- Database cylinder -->
+  <ellipse cx="296" cy="96" rx="36" ry="12" stroke="#C4A574" stroke-width="1.5" opacity="0.7"/>
+  <path d="M260 96v72c0 6.627 16.117 12 36 12s36-5.373 36-12V96" stroke="#C4A574" stroke-width="1.5" opacity="0.7"/>
+  <path d="M260 120c0 6.627 16.117 12 36 12s36-5.373 36-12" stroke="#8F6A3E" stroke-width="1" opacity="0.4"/>
+  <path d="M272 144h48M272 156h32" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+  <!-- Chat bubble -->
+  <rect x="148" y="88" width="96" height="72" rx="20" stroke="#C4A574" stroke-width="1.5" opacity="0.85"/>
+  <path d="M172 112h48M172 128h32" stroke="#FAF6F0" stroke-width="1" opacity="0.3"/>
+  <path d="M184 168l-12 16 20-12" stroke="#C4A574" stroke-width="1.2" opacity="0.55" fill="none"/>
+  <!-- Grounding connector lines -->
+  <path d="M144 128h4" stroke="#8F6A3E" stroke-width="1.2" opacity="0.55"/>
+  <path d="M244 128h52" stroke="#8F6A3E" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="196" cy="128" r="5" fill="#C4A574" opacity="0.45"/>
+</svg>

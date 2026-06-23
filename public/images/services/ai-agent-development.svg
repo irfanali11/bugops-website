@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Workflow nodes -->
+  <circle cx="72" cy="120" r="26" stroke="#C4A574" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="168" cy="72" r="22" stroke="#C4A574" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="264" cy="120" r="26" stroke="#C4A574" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="328" cy="168" r="20" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <!-- Directional flow arrows -->
+  <path d="M98 108l58-28" stroke="#C4A574" stroke-width="1.3" opacity="0.65"/>
+  <path d="M152 62l8-6 8 6" stroke="#8F6A3E" stroke-width="1" opacity="0.55" fill="none"/>
+  <path d="M190 82l62 28" stroke="#C4A574" stroke-width="1.3" opacity="0.65"/>
+  <path d="M248 108l8-6 8 6" stroke="#8F6A3E" stroke-width="1" opacity="0.55" fill="none"/>
+  <path d="M288 134l32 26" stroke="#C4A574" stroke-width="1.3" opacity="0.6"/>
+  <path d="M312 156l6 8-6 8" stroke="#8F6A3E" stroke-width="1" opacity="0.55" fill="none"/>
+  <!-- Node labels -->
+  <path d="M60 120h24M156 72h24M252 120h24M316 168h24" stroke="#FAF6F0" stroke-width="1" opacity="0.22"/>
+  <!-- Output blocks -->
+  <rect x="56" y="156" width="32" height="14" rx="3" stroke="#8F6A3E" stroke-width="1" opacity="0.45"/>
+  <rect x="152" y="108" width="32" height="14" rx="3" stroke="#8F6A3E" stroke-width="1" opacity="0.45"/>
+  <rect x="248" y="156" width="32" height="14" rx="3" stroke="#8F6A3E" stroke-width="1" opacity="0.45"/>
+  <rect x="312" y="192" width="32" height="14" rx="3" stroke="#8F6A3E" stroke-width="1" opacity="0.4"/>
+</svg>

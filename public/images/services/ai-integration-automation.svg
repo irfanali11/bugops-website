@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
+  <!-- Existing systems grid -->
+  <rect x="48" y="72" width="96" height="96" rx="8" stroke="#C4A574" stroke-width="1.5" opacity="0.65"/>
+  <path d="M64 88h64M64 104h48M64 120h56M64 136h40" stroke="#FAF6F0" stroke-width="1" opacity="0.2"/>
+  <path d="M72 96h16v16H72zM96 96h16v16H96zM72 120h16v16H72zM96 120h16v16H96z" stroke="#C4A574" stroke-width="1" opacity="0.35"/>
+  <!-- Gear -->
+  <circle cx="248" cy="120" r="28" stroke="#C4A574" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="248" cy="120" r="10" stroke="#8F6A3E" stroke-width="1.2" opacity="0.6"/>
+  <path d="M248 84v12M248 144v12M212 120h-12M276 120h12" stroke="#C4A574" stroke-width="1.5" opacity="0.7"/>
+  <path d="M222 98l-8-8M274 98l8-8M274 142l8 8M222 142l-8 8" stroke="#C4A574" stroke-width="1.2" opacity="0.55"/>
+  <!-- Puzzle piece -->
+  <path d="M312 96h32v16c8 0 8 8 0 8v16h-32v-16c-8 0-8-8 0-8V96h32z" stroke="#C4A574" stroke-width="1.5" opacity="0.75"/>
+  <!-- Connector lines -->
+  <path d="M144 120h76" stroke="#8F6A3E" stroke-width="1.3" opacity="0.6"/>
+  <path d="M276 120h28" stroke="#8F6A3E" stroke-width="1.3" opacity="0.6"/>
+  <circle cx="212" cy="120" r="4" fill="#C4A574" opacity="0.5"/>
+  <circle cx="296" cy="120" r="4" fill="#C4A574" opacity="0.5"/>
+  <!-- Automation flow -->
+  <path d="M248 156v24M232 180h32" stroke="#C4A574" stroke-width="1" opacity="0.4"/>
+</svg>
