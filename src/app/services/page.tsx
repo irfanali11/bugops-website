@@ -41,7 +41,7 @@ export default function ServicesPage() {
             outcomeHeadline={webDevPillar.outcomeHeadline}
             body={webDevPillar.body}
           >
-            <Stagger className="grid gap-5 md:grid-cols-3" stagger={0.04}>
+            <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" stagger={0.04}>
               {webDevPillar.tiers.map((tier) => (
                 <StaggerItem key={tier.id}>
                   <ServiceExploreCard

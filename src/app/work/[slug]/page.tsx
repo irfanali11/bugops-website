@@ -141,7 +141,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <FadeIn>
               <h2 className="text-xl font-bold text-foreground">Related work</h2>
             </FadeIn>
-            <Stagger className="mt-6 grid gap-6 sm:grid-cols-3" stagger={0.12}>
+            <Stagger className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.12}>
               {related.map((r) => (
                 <StaggerItem key={r.slug}>
                   <Link href={`/work/${r.slug}`} className="group block">

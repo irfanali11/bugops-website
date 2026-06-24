@@ -14,7 +14,7 @@ export function HowWeWork() {
 
         <div className="relative mt-14 hidden md:block">
           <div className="timeline-line absolute left-0 right-0 top-5 h-px opacity-40" />
-          <Stagger className="grid grid-cols-4 gap-6" stagger={0.04}>
+          <Stagger className="grid grid-cols-2 gap-6 lg:grid-cols-4" stagger={0.04}>
             {howWeWork.map((step) => (
               <StaggerItem key={step.step}>
                 <div className="relative pt-10">

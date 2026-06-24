@@ -25,6 +25,8 @@ export function ProjectMarquee({ items }: { items: ProjectMarqueeItem[] }) {
                   alt=""
                   width={56}
                   height={40}
+                  loading="lazy"
+                  sizes="56px"
                   className="h-full w-full object-cover object-top"
                   aria-hidden
                 />

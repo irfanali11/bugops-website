@@ -11,7 +11,7 @@ import "./motion-premium.css";
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -76,7 +76,7 @@ export default function RootLayout({
         </a>
         <HashScrollHandler />
         <Header />
-        <main id="main-content">{children}</main>
+        <main id="main-content" className="pb-24">{children}</main>
         <Footer />
         <LazyChatWidget />
       </body>

@@ -16,7 +16,7 @@ export function SectionHeader({
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center", className)}>
       {label && <p className="section-label">{label}</p>}
-      <h2 className={cn("section-heading", label && "mt-2")}>{title}</h2>
+      <h2 className={cn("section-heading", label && "mt-3")}>{title}</h2>
       {description && <p className="type-body mt-4 text-muted">{description}</p>}
     </div>
   );

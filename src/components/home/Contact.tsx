@@ -5,7 +5,9 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { FormSelect } from "@/components/ui/FormSelect";
 import { SectionAnchor } from "@/components/ui/SectionAnchor";
-import { FadeIn, stepMotion } from "@/components/ui/FadeIn";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { stepMotion } from "@/lib/step-motion";
+import { cn } from "@/lib/utils";
 import { siteConfig, serviceInterests } from "@/lib/site-config";
 
 export function Contact() {
@@ -57,7 +59,7 @@ export function Contact() {
               ) : (
                 <motion.div key="form" {...motionProps}>
                   <form
-                    className={`surface-card space-y-4 p-6 md:p-8${submitting ? " form-is-submitting" : ""}`}
+                    className={cn("surface-card space-y-4 p-6 md:p-8", submitting && "form-is-submitting")}
                     aria-labelledby={`${formId}-heading`}
                     aria-busy={submitting}
                     onSubmit={(e) => {

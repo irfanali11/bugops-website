@@ -130,7 +130,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="relative z-10 ml-auto hidden items-center gap-3 md:flex">
+          <div className="relative z-10 ml-auto hidden items-center gap-3 lg:flex">
             <a
               href={siteConfig.social.github}
               target="_blank"

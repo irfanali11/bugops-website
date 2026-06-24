@@ -32,7 +32,7 @@ export function Logo({
             Bug<span className="text-brand">Ops</span>
           </span>
           {showTagline && (
-            <span className={cn("mt-1 font-medium tracking-wide text-faint", s.ops)}>{siteConfig.tagline}</span>
+            <span className={cn("mt-1 hidden font-medium tracking-wide text-faint lg:block", s.ops)}>{siteConfig.tagline}</span>
           )}
         </span>
       )}
