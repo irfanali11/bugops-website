@@ -118,6 +118,11 @@ html {
 .motion-stagger > .motion-stagger-item:nth-child(11) { animation-delay: 0.4s; }
 .motion-stagger > .motion-stagger-item:nth-child(12) { animation-delay: 0.44s; }
 
+/* Cap cascade delay so large grids don't block paint */
+.motion-stagger > .motion-stagger-item:nth-child(n + 7) {
+  animation-delay: 0.2s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .motion-stagger > .motion-stagger-item {
     animation: none;
@@ -801,10 +806,68 @@ a.btn-disabled {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     radial-gradient(circle at 25% 30%, rgba(6, 182, 212, 0.22) 0%, transparent 45%),
     radial-gradient(circle at 75% 70%, rgba(139, 92, 246, 0.14) 0%, transparent 40%);
   animation: ambient-drift 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Work portfolio — light selective blur on typical sensitive UI regions */
+.work-preview-privacy > img,
+.work-preview-privacy span > img {
+  position: relative;
+  z-index: 0;
+}
+
+.portfolio-privacy-zone {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(248, 250, 252, 0.07);
+}
+
+.portfolio-privacy-zone-header {
+  top: 10%;
+  left: 18%;
+  right: 18%;
+  height: 11%;
+  border-radius: 0.5rem;
+}
+
+.portfolio-privacy-zone-center {
+  top: 22%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  border-radius: 0.75rem;
+}
+
+.portfolio-privacy-zone-sidebar {
+  top: 16%;
+  right: 5%;
+  width: 20%;
+  height: 52%;
+  border-radius: 0.5rem;
+}
+
+/* Work list grid — skip GPU-heavy blur overlays and ambient drift */
+.work-preview-list::before {
+  display: none;
+}
+
+.work-preview-list {
+  background: var(--color-charcoal-800);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-privacy-zone {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
 }
 
 @keyframes ambient-drift {

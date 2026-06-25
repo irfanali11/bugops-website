@@ -1,11 +1,28 @@
 import dynamic from "next/dynamic";
 import { Hero } from "@/components/home/Hero";
-import { TrustPartners } from "@/components/home/TrustPartners";
-import { Stats } from "@/components/home/Stats";
 import { Industries } from "@/components/home/Industries";
-import { ServicesOverview } from "@/components/home/ServicesOverview";
-import { MidPageCta } from "@/components/home/MidPageCta";
 import { SectionPlaceholder } from "@/components/ui/SectionPlaceholder";
+
+/* Lazy sections above the fold path — Industries stays eager so #industries mounts on first paint */
+const TrustPartners = dynamic(
+  () => import("@/components/home/TrustPartners").then((m) => ({ default: m.TrustPartners })),
+  { loading: () => <SectionPlaceholder /> }
+);
+
+const Stats = dynamic(
+  () => import("@/components/home/Stats").then((m) => ({ default: m.Stats })),
+  { loading: () => <SectionPlaceholder /> }
+);
+
+const ServicesOverview = dynamic(
+  () => import("@/components/home/ServicesOverview").then((m) => ({ default: m.ServicesOverview })),
+  { loading: () => <SectionPlaceholder /> }
+);
+
+const MidPageCta = dynamic(
+  () => import("@/components/home/MidPageCta").then((m) => ({ default: m.MidPageCta })),
+  { loading: () => <SectionPlaceholder /> }
+);
 
 const AiPipelineDemo = dynamic(
   () => import("@/components/home/AiPipelineDemo").then((m) => ({ default: m.AiPipelineDemo })),

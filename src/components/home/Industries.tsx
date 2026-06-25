@@ -9,10 +9,10 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/ui/FadeIn";
 
 export function Industries() {
   return (
-    <section className="section-band-base relative py-24 md:py-32">
+    <section className="section-band-base relative py-16 sm:py-20 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.06),transparent_65%)]" />
 
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <SectionAnchor id="industries" />
           <p className="section-label">Sectors we serve</p>
@@ -22,7 +22,7 @@ export function Industries() {
           </p>
         </FadeIn>
 
-        <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.04}>
+        <Stagger className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {industries.map((item, index) => {
             const theme = industryThemes[item.title] ?? defaultIndustryTheme;
             const Icon = theme.Icon;
@@ -47,7 +47,7 @@ export function Industries() {
                         />
                       </div>
                     ) : null}
-                    <div className="flex flex-1 flex-col p-8">
+                    <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
                     <div className="flex items-start justify-between gap-4">
                       <div
                         className="industry-icon transition-transform duration-500 group-hover:scale-105"

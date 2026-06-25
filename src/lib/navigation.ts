@@ -63,36 +63,44 @@ export function scrollToSection(hash: string, behavior: ScrollBehavior = "auto")
   return true;
 }
 
-export function scrollToSectionWithRetry(hash: string, maxMs = 1200) {
+/** rAF-based retry — avoids setInterval main-thread churn during route + hash nav. */
+export function scrollToSectionWithRetry(hash: string, maxMs = 400) {
   if (!hash || typeof window === "undefined") return () => {};
 
-  pauseMotionForScroll(maxMs + 350);
+  pauseMotionForScroll(450);
 
-  let finished = false;
+  let cancelled = false;
   const started = performance.now();
-  let intervalId = 0;
+  let rafId = 0;
 
   const finish = () => {
-    if (finished) return;
-    finished = true;
-    window.clearInterval(intervalId);
-    window.setTimeout(resumeMotionAfterScroll, 280);
+    if (cancelled) return;
+    cancelled = true;
+    cancelAnimationFrame(rafId);
+    window.setTimeout(resumeMotionAfterScroll, 160);
   };
 
-  if (scrollToSection(hash, "auto")) {
-    finish();
-    return finish;
-  }
+  const attempt = () => {
+    if (cancelled) return;
 
-  intervalId = window.setInterval(() => {
-    if (scrollToSection(hash, "auto") || performance.now() - started >= maxMs) {
+    if (scrollToSection(hash, "auto")) {
       finish();
+      return;
     }
-  }, 48);
+
+    if (performance.now() - started >= maxMs) {
+      finish();
+      return;
+    }
+
+    rafId = requestAnimationFrame(attempt);
+  };
+
+  attempt();
 
   return () => {
-    finished = true;
-    window.clearInterval(intervalId);
+    cancelled = true;
+    cancelAnimationFrame(rafId);
     resumeMotionAfterScroll();
   };
 }

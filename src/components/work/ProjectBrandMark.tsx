@@ -63,12 +63,21 @@ const marks: Record<string, ReactNode> = {
       </text>
     </svg>
   ),
-  "trendforce-consulting": (
-    <svg viewBox="0 0 176 32" fill="none" aria-hidden>
-      <path d="M4 24V12M4 24h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M7 20l4-5 4 3 5-8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="32" y="22" fill="currentColor" fontFamily="ui-sans-serif, system-ui, sans-serif" fontSize="14" fontWeight="600" letterSpacing="-0.02em">
-        TrendForce
+  aesthete: (
+    <svg viewBox="0 0 148 32" fill="none" aria-hidden>
+      <path d="M4 26V8M4 26h14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M7 20h8M7 14h5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
+      <text x="28" y="22" fill="currentColor" fontFamily="ui-serif, Georgia, serif" fontSize="15" fontWeight="500" letterSpacing="0.14em">
+        AÉSTHETE
+      </text>
+    </svg>
+  ),
+  panto: (
+    <svg viewBox="0 0 108 32" fill="none" aria-hidden>
+      <rect x="2" y="10" width="14" height="12" rx="2" stroke="currentColor" strokeWidth="1.4" />
+      <path d="M5 16h8M5 13h5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
+      <text x="24" y="22" fill="currentColor" fontFamily="ui-sans-serif, system-ui, sans-serif" fontSize="16" fontWeight="700" letterSpacing="-0.03em">
+        Panto
       </text>
     </svg>
   ),

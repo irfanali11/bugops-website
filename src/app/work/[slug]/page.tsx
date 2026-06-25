@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { FadeIn, Stagger, StaggerItem } from "@/components/ui/FadeIn";
+import { PortfolioPreviewImage } from "@/components/work/PortfolioPreviewImage";
 import { TechnicalTabs } from "@/components/work/TechnicalTabs";
 import {
   caseStudies,
@@ -63,27 +63,20 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           {preview && (
             <div className="mx-auto mt-10 max-w-5xl space-y-6 px-6 lg:px-8">
-              <div className="surface-card work-preview relative aspect-[16/10] overflow-hidden">
-                <Image
+              <div className="surface-card overflow-hidden">
+                <PortfolioPreviewImage
                   src={preview.src}
                   alt={preview.alt}
-                  fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 1024px"
-                  className="object-cover object-top"
                 />
               </div>
               {gallery.map((image) => (
-                <div
-                  key={image.src}
-                  className="surface-card work-preview relative aspect-[16/10] overflow-hidden"
-                >
-                  <Image
+                <div key={image.src} className="surface-card overflow-hidden">
+                  <PortfolioPreviewImage
                     src={image.src}
                     alt={image.alt}
-                    fill
                     sizes="(max-width: 1024px) 100vw, 1024px"
-                    className="object-cover object-top"
                   />
                 </div>
               ))}

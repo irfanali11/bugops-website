@@ -15,9 +15,13 @@ export const portfolioCardImages: Record<string, { src: string; alt: string }> =
     src: "/images/portfolio/collaborax-workspace.png",
     alt: "CollaboraX high-concurrency real-time enterprise workspace interface",
   },
-  "trendforce-consulting": {
-    src: "/images/portfolio/trendforce-consulting.png",
-    alt: "TrendForce Consulting financial services marketing website hero section",
+  aesthete: {
+    src: "/images/portfolio/aesthete-hero.png",
+    alt: "AÉSTHETE luxury skincare and olfactory boutique hero with minimalist Swiss modernist layout",
+  },
+  panto: {
+    src: "/images/portfolio/panto-hero.png",
+    alt: "Panto minimalist furniture storefront hero with dark textured interior and search bar",
   },
   "zenith-ai": {
     src: "/images/portfolio/zenith-ai-dashboard.png",
@@ -30,6 +34,26 @@ export const portfolioCardImages: Record<string, { src: string; alt: string }> =
 };
 
 export const portfolioGalleryImages: Record<string, readonly { src: string; alt: string }[]> = {
+  panto: [
+    {
+      src: "/images/portfolio/panto-catalog.png",
+      alt: "Panto best-selling product carousel with category pill filters for chairs, beds, sofas, and lamps",
+    },
+    {
+      src: "/images/portfolio/panto-experiences.png",
+      alt: "Panto experiences split layout showcasing premium interior design and craftsmanship narrative",
+    },
+  ],
+  aesthete: [
+    {
+      src: "/images/portfolio/aesthete-principles.png",
+      alt: "AÉSTHETE metric principles section with bio-identical skincare and alpine sourcing narrative",
+    },
+    {
+      src: "/images/portfolio/aesthete-catalog.png",
+      alt: "AÉSTHETE interactive product catalog with quick-view, ratings, and stock states",
+    },
+  ],
   "turkey-ai-itinerary-planner": [
     {
       src: "/images/portfolio/turkey-ai-itinerary-destinations.png",
@@ -55,7 +79,7 @@ export function getPortfolioGalleryImages(slug: string) {
 type CardImage = { src: string; alt: string };
 
 const unsplash = (photoId: string, alt: string) => ({
-  src: `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=960&q=85`,
+  src: `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=640&q=80`,
   alt,
 });
 

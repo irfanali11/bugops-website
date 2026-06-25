@@ -16,7 +16,7 @@ export function Container({
   size?: keyof typeof maxWidths;
 }) {
   return (
-    <div className={cn("mx-auto px-6 lg:px-8", maxWidths[size], className)}>
+    <div className={cn("mx-auto w-full px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
       {children}
     </div>
   );

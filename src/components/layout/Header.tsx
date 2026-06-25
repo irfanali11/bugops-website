@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Github, Menu, X } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { Logo } from "@/components/ui/Logo";
@@ -115,7 +115,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50">
       <div className={cn("premium-shell border-b border-transparent", scrolled && "is-scrolled border-border/40")}>
-        <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center px-6 lg:px-8">
+        <div className="mx-auto flex h-[4.5rem] w-full max-w-6xl items-center px-4 sm:px-6 lg:px-8">
           <Logo size="md" />
 
           <nav className="relative z-10 mx-auto hidden items-center gap-9 lg:flex" aria-label="Primary">
@@ -158,44 +158,32 @@ export function Header() {
         </div>
 
         <AnimatePresence>
-          {open && (
+          {open ? (
             <motion.div
               id={mobileNavId}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.32, ease: menuEase }}
-              className="motion-gpu relative z-10 overflow-hidden border-t border-border/50 lg:hidden"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.24, ease: menuEase }}
+              className="mobile-nav-panel motion-gpu relative z-10 overflow-hidden border-t border-border/50 lg:hidden"
             >
-              <nav className="space-y-1 px-6 py-4" aria-label="Mobile">
-                {links.map((link, i) => (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: -14 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -8 }}
-                    transition={{ duration: 0.22, delay: i * 0.045, ease: menuEase }}
-                  >
+              <nav className="space-y-1 px-4 py-4 sm:px-6" aria-label="Mobile">
+                {links.map((link) => (
+                  <Fragment key={link.href}>
                     {renderNavItem(
                       link,
                       isNavActive(link.href, pathname, hash),
                       "interactive-nav-item block rounded-xl px-3 py-2.5 text-base font-medium text-muted hover:bg-surface-muted hover:text-foreground",
                       () => setOpen(false)
                     )}
-                  </motion.div>
+                  </Fragment>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.22, delay: links.length * 0.045, ease: menuEase }}
-                >
-                  <Button href="/book" className="mt-3 w-full">
-                    Get in touch
-                  </Button>
-                </motion.div>
+                <Button href="/book" className="mt-3 w-full">
+                  Get in touch
+                </Button>
               </nav>
             </motion.div>
-          )}
+          ) : null}
         </AnimatePresence>
       </div>
     </header>

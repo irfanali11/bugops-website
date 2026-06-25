@@ -9,7 +9,7 @@ export const webDevPillar = {
   headline: "Web development",
   outcomeHeadline: "Sites and platforms built to convert, scale, and stay maintainable",
   body: "From marketing sites to full-scale platforms — built for performance, security, and the workflows your team runs every day.",
-  relatedWorkSlugs: ["collaborax", "nexusai-business-suite", "smartsupport-ai"],
+  relatedWorkSlugs: ["aesthete", "panto", "collaborax"],
   tiers: [
     {
       id: "small-business",
@@ -71,7 +71,7 @@ export const aiPillar = {
       body: "Automated trend detection, anomaly alerts, and executive dashboards — replacing manual spreadsheet cycles.",
       useCases: ["Operational reporting", "Trend & anomaly detection", "Executive dashboards"],
       capabilities: ["Data pipelines", "Automated analysis", "Real-time visualizations"],
-      relatedWorkSlugs: ["nexusai-business-suite", "zenith-ai", "trendforce-consulting"],
+      relatedWorkSlugs: ["nexusai-business-suite", "zenith-ai", "collaborax"],
     },
     {
       slug: "custom-ai-applications",
@@ -91,7 +91,7 @@ export const aiPillar = {
       body: "Embed AI into CRMs, ERPs, and custom software — automating repetitive work without replacing systems you rely on.",
       useCases: ["CRM enrichment", "Workflow automation", "API-driven AI features"],
       capabilities: ["System integration", "Event-driven automation", "Monitoring & fallbacks"],
-      relatedWorkSlugs: ["smartsupport-ai", "trendforce-consulting"],
+      relatedWorkSlugs: ["smartsupport-ai", "nexusai-business-suite"],
     },
     {
       slug: "nlp-document-intelligence",
@@ -111,7 +111,7 @@ export const aiPillar = {
       body: "Image and video analysis for quality control, asset tagging, identity verification, and visual search.",
       useCases: ["Quality inspection", "Visual search", "Identity verification"],
       capabilities: ["Model training & tuning", "Edge & cloud deployment", "Real-time inference"],
-      relatedWorkSlugs: ["trendforce-consulting"],
+      relatedWorkSlugs: ["collaborax", "zenith-ai"],
     },
     {
       slug: "predictive-ai-ml",
@@ -121,7 +121,7 @@ export const aiPillar = {
       body: "Custom models for demand forecasting, churn prediction, risk scoring, and recommendation engines.",
       useCases: ["Demand forecasting", "Churn & risk scoring", "Recommendation systems"],
       capabilities: ["Feature engineering", "Model training & validation", "MLOps & retraining"],
-      relatedWorkSlugs: ["trendforce-consulting"],
+      relatedWorkSlugs: ["collaborax", "zenith-ai"],
     },
   ],
 };

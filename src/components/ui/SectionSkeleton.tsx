@@ -1,7 +1,7 @@
 export function SectionSkeleton({ rows = 3 }: { rows?: number }) {
   return (
-    <div className="section-band-base py-24 md:py-32" aria-hidden>
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <div className="section-band-base py-16 sm:py-20 md:py-32" aria-hidden>
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl space-y-3">
           <div className="skeleton-line h-3 w-24" />
           <div className="skeleton-line h-9 w-full max-w-md" />

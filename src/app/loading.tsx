@@ -1,3 +1,5 @@
+import { SectionSkeleton } from "@/components/ui/SectionSkeleton";
+
 export default function Loading() {
-  return null;
+  return <SectionSkeleton rows={2} />;
 }

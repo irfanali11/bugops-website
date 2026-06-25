@@ -28,6 +28,13 @@ html.motion-scroll-paused .hero-mesh-glow-right.hero-ambient-enhanced {
   animation-play-state: paused;
 }
 
+html.motion-scroll-paused .motion-stagger-item,
+html.motion-scroll-paused .work-preview::before {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* Buttons: shimmer track (transform only) */
 .btn-primary,
 .btn-secondary,
